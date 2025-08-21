@@ -1,0 +1,91 @@
+{
+    "info": {
+        "name": "Article API",
+        "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+    },
+    "item": [
+        {
+            "name": "Create Article",
+            "request": {
+                "method": "POST",
+                "header": [
+                    {
+                        "key": "Content-Type",
+                        "value": "application/json"
+                    }
+                ],
+                "body": {
+                    "mode": "raw",
+                    "raw": "{\"title\": \"Judul Artikel Pertama yang Sangat Panjang Sekali\", \"content\": \"Ini adalah konten artikel yang sangat panjang untuk memenuhi syarat minimal 200 karakter. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.\", \"category\": \"Teknologi\", \"status\": \"publish\"}"
+                },
+                "url": {
+                    "raw": "http://localhost:8080/article/",
+                    "host": ["localhost"],
+                    "port": "8080",
+                    "path": ["article", ""]
+                }
+            }
+        },
+        {
+            "name": "Get Articles",
+            "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                    "raw": "http://localhost:8080/article/10/0",
+                    "host": ["localhost"],
+                    "port": "8080",
+                    "path": ["article", "10", "0"]
+                }
+            }
+        },
+        {
+            "name": "Get Article by ID",
+            "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                    "raw": "http://localhost:8080/article/id/1",
+                    "host": ["localhost"],
+                    "port": "8080",
+                    "path": ["article", "id", "1"]
+                }
+            }
+        },
+        {
+            "name": "Update Article",
+            "request": {
+                "method": "PUT",
+                "header": [
+                    {
+                        "key": "Content-Type",
+                        "value": "application/json"
+                    }
+                ],
+                "body": {
+                    "mode": "raw",
+                    "raw": "{\"title\": \"Judul Artikel Diperbarui yang Sangat Panjang\", \"content\": \"Konten artikel yang diperbarui untuk memenuhi syarat minimal 200 karakter. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.\", \"category\": \"Pendidikan\", \"status\": \"draft\"}"
+                },
+                "url": {
+                    "raw": "http://localhost:8080/article/id/1",
+                    "host": ["localhost"],
+                    "port": "8080",
+                    "path": ["article", "id", "1"]
+                }
+            }
+        },
+        {
+            "name": "Delete Article",
+            "request": {
+                "method": "DELETE",
+                "header": [],
+                "url": {
+                    "raw": "http://localhost:8080/article/id/1",
+                    "host": ["localhost"],
+                    "port": "8080",
+                    "path": ["article", "id", "1"]
+                }
+            }
+        }
+    ]
+}
