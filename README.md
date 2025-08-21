@@ -1,4 +1,4 @@
-# 📰 Blog Article App (Frontend Test)
+# 📰 Blog Article App
 
 Aplikasi sederhana untuk mengelola artikel dengan fitur **CRUD (Create, Read, Update, Delete)**.  
 Frontend dibuat dengan **React + Vite + TailwindCSS**, sedangkan backend menggunakan **Golang + MySQL**.
@@ -6,12 +6,12 @@ Frontend dibuat dengan **React + Vite + TailwindCSS**, sedangkan backend menggun
 ---
 
 ## 🛠️ Tech Stack
-- **Frontend**
+- **Soal Test - Frontend**
   - React + Vite
   - React Router
   - TailwindCSS (v3.4.1)
 
-- **Backend**
+- **Soal Test - Backend**
   - Golang (Gin Framework)
   - MySQL
   - Go Playground Validator
