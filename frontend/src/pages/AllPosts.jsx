@@ -9,9 +9,10 @@ export default function AllPosts() {
     try {
       const res = await fetch("http://localhost:8080/article/100/0");
       const data = await res.json();
-      setArticles(data);
-    } catch (error) {
-      console.error("Error fetching articles:", error);
+      setArticles(Array.isArray(data) ? data : []); // <-- SELALU array
+    } catch (err) {
+      console.error("Gagal fetch artikel:", err);
+      setArticles([]); // fallback biar nggak null
     }
   };
 
@@ -46,8 +47,10 @@ export default function AllPosts() {
       }
   };
 
-  const filtered = articles.filter((a) => a.status?.toLowerCase() === tab);
-
+  const filtered = (articles ?? []).filter(
+    (a) => a?.status?.toLowerCase() === tab
+  );
+  
   return (
     <div className="space-y-8">
       {/* Header */}
